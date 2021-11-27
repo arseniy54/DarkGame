@@ -98,10 +98,14 @@
       <img src="../assets/four_screen.png" />
       <span id="name_news">НОВОСТИ НАШЕГО КЛУБА</span>
       <div class="blocks_news">
-        <div id="block_news">
+        <div id="block_news" v-for="item in a" :key="item.a">
           <img id="img_news" src="../assets/img_news.png" />
-          <span id="description_news"></span>
-          <span id="date"></span>
+          <div class="description">
+            <span
+              >Проведение локального турнира между двумя лучшими команда...</span
+            >
+          </div>
+          <span id="date">24.08.2021</span>
         </div>
       </div>
     </div>
@@ -109,7 +113,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      a: [1, 2, 3]
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -507,29 +517,61 @@ body {
   position: absolute;
   width: 75%;
   height: 35%;
-  top: 23.2%;
+  top: 33%;
   left: 18%;
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
 }
-.block_news{
-  position: absolute;
-  width: 17%;
-  height: 35%;
+#block_news {
+  position: relative;
+  width: 25%;
   background-color: #0e1016;
 }
-.img_news{
-position: absolute;
-width: 100;
-height: 78.5%;
-top: 0;
-left: 0;
+#img_news {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.description {
+  position: relative;
+  left: 0%;
+  width: 100%;
+  height: 4.5%;
+  top: 0%;
+  font-size: 16px;
+  color: #ffffff;
+  word-wrap: break-word;
+}
+#date{
+  position: relative;
+  width: 7.6%;
+  font-size: 12px;
+  color: #ffffff;
+  left: 70%;
+  top: 50%;
+  word-wrap: break-word;
+
 }
 
 @media screen and (max-width: 1280px) {
+  #block_news{
+    width: 20%;
+  }
+  .description{
+    font-size: 12px;
+  }
+  #date{
+    left: 60%;
+  }
   #logo {
     width: 290px;
     height: 159px;
+  }
+  #name_news{
+    font-size: 32px;
   }
   .slang {
     top: 19.5%;
@@ -561,14 +603,14 @@ left: 0;
     font-weight: normal;
   }
   .price_console span {
-    font-size: 16px;
+    font-size: 15px;
     left: 12%;
-    top: 25%;
+    top: 20%;
     font-weight: 400;
   }
   .price_vip span {
-    font-size: 16px;
-    top: 25%;
+    font-size: 15px;
+    top: 20%;
     left: 12%;
     font-weight: 400;
   }
@@ -593,6 +635,17 @@ left: 0;
   #logo {
     width: 170px;
     height: 90px;
+  }
+  .description{
+    font-size: 10.5px;
+  }
+  #date{
+    font-size: 10.5px;
+    left: 50%;
+    top: 0%;
+  }
+   #name_news{
+    font-size: 22px;
   }
   .slang {
     font-size: 42px;
@@ -658,10 +711,35 @@ left: 0;
 }
 
 @media screen and (max-width: 590px) {
+  #name_news{
+    left: -10%;
+  }
+  .blocks_news{
+    width: 70%;
+  left: 10%;
+  }
+  #date{
+    font-size: 8.5px;
+    top: 40%;
+  }
+  .four_screen{
+    width: 135%;
+  }
+  .description{
+    word-wrap:unset;
+    font-size: 8.5px;
+    font-weight: normal;
+  }
+  #block_news{
+    left: -10%;
+  }
   #logo {
     width: 130px;
     height: 70px;
     top: 15%;
+  }
+   #name_news{
+    font-size: 12px;
   }
   .slang {
     font-size: 24px;
