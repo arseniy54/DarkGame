@@ -53,7 +53,7 @@
         <img id="console_room" src="../assets/console_room.png" />
         <div class="price_console"><span>149₽ час</span></div>
       </div>
-    <!--  <div class="description">
+     <div class="description" v-if="room = 1">
         <span id="name_room"> {{ name }}</span>
         <img
           id="rhomb_room"
