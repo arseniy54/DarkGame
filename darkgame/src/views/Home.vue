@@ -42,7 +42,11 @@
       <img src="../assets/fon_third.png" />
       <span id="name_iron">ИГРОВОЕ ЖЕЛЕЗО</span>
       <div class="block_rooms">
-        <img id="ordinary_room" src="../assets/ordinary_room.png" />
+        <img
+          id="ordinary_room"
+          src="../assets/ordinary_room.png"
+          @click="vip"
+        />
         <div class="price_ordinary"><span>59₽ час</span></div>
         <img id="vip_room" src="../assets/vip_room.png" />
         <div class="price_vip"><span>149₽ час</span></div>
@@ -50,7 +54,7 @@
         <div class="price_console"><span>149₽ час</span></div>
       </div>
       <div class="description">
-        <span id="name_room"> {{ name }}</span>
+        <!--<span id="name_room"> {{ name }}</span>-->
         <img
           id="rhomb_room"
           class="rhomb_room"
@@ -80,6 +84,7 @@
           class="rhomb_room"
           src="../assets/rhomb_blue.svg"
         />
+
         <span id="text_room_5">{{ text_5 }}</span>
         <img
           id="rhomb_room"
@@ -87,6 +92,17 @@
           src="../assets/rhomb_blue.svg"
         />
         <span id="text_room_6">{{ text_6 }}</span>
+      </div>
+    </div>
+    <div class="four_screen">
+      <img src="../assets/four_screen.png" />
+      <span id="name_news">НОВОСТИ НАШЕГО КЛУБА</span>
+      <div class="blocks_news">
+        <div id="block_news">
+          <img id="img_news" src="../assets/img_news.png" />
+          <span id="description_news"></span>
+          <span id="date"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -342,7 +358,7 @@ body {
 #name_iron {
   position: absolute;
   width: 100%;
-  left: 5%;
+  left: 0%;
   top: 10%;
   font-family: "Roboto" sans-serif;
 
@@ -358,7 +374,7 @@ body {
   position: absolute;
   width: 81%;
   height: 27%;
-  left: 19%;
+  left: 15%;
   top: 26%;
   display: flex;
   flex-direction: row;
@@ -381,8 +397,8 @@ body {
 }
 .price_ordinary span {
   position: absolute;
-  left: 15%;
-  top: 10%;
+  left: 22.5%;
+  top: 15%;
   font-family: "Roboto" sans-serif;
 
   font-style: normal;
@@ -407,8 +423,8 @@ body {
 }
 .price_vip span {
   position: absolute;
-  left: 11.6%;
-  top: 10%;
+  left: 20.5%;
+  top: 15%;
   font-family: "Roboto" sans-serif;
 
   font-style: normal;
@@ -433,8 +449,8 @@ body {
 }
 .price_console span {
   position: absolute;
-  left: 11.6%;
-  top: 10%;
+  left: 15.6%;
+  top: 15%;
   font-family: "Roboto" sans-serif;
 
   font-style: normal;
@@ -449,6 +465,67 @@ body {
 
   color: #ffffff;
 }
+.description {
+  position: relative;
+  width: 79%;
+  height: 32.5%S;
+}
+#name_room {
+  position: absolute;
+  width: 20%;
+  height: 6%;
+}
+
+.four_screen {
+  position: relative;
+  width: 100%;
+  background-color: #181823;
+}
+
+.four_screen > img {
+  width: 100%;
+}
+
+#name_news {
+  position: absolute;
+  width: 100%;
+  height: 14%;
+  left: 0%;
+  top: 5%;
+
+  font-family: "Roboto" sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 63px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.blocks_news {
+  position: absolute;
+  width: 75%;
+  height: 35%;
+  top: 23.2%;
+  left: 18%;
+  display: flex;
+  flex-direction: row;
+}
+.block_news{
+  position: absolute;
+  width: 17%;
+  height: 35%;
+  background-color: #0e1016;
+}
+.img_news{
+position: absolute;
+width: 100;
+height: 78.5%;
+top: 0;
+left: 0;
+}
+
 @media screen and (max-width: 1280px) {
   #logo {
     width: 290px;
@@ -544,14 +621,14 @@ body {
     margin-top: -0.5%;
     width: 30%;
   }
-  .price_console{
+  .price_console {
     width: 10%;
     left: 68.5%;
   }
-  .price_vip{
+  .price_vip {
     width: 10%;
   }
-  .price_ordinary{
+  .price_ordinary {
     width: 10%;
   }
   .price_console span {
@@ -566,7 +643,7 @@ body {
     left: 4.5%;
     top: 15%;
   }
-  .price_ordinary span{
+  .price_ordinary span {
     font-size: 11px;
     font-weight: 400;
     left: 11%;
@@ -723,7 +800,7 @@ body {
   .price_console {
     left: 64.5%;
   }
-  .price_ordinary{
+  .price_ordinary {
     left: 8%;
   }
 }
