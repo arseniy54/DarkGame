@@ -381,13 +381,13 @@ body {
 }
 .price_ordinary span {
   position: absolute;
-  left: 22%;
-  top: 20%;
+  left: 15%;
+  top: 10%;
   font-family: "Roboto" sans-serif;
 
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 81.69%;
 
   display: flex;
@@ -407,13 +407,13 @@ body {
 }
 .price_vip span {
   position: absolute;
-  left: 19%;
-  top: 20%;
+  left: 11.6%;
+  top: 10%;
   font-family: "Roboto" sans-serif;
 
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 81.69%;
 
   display: flex;
@@ -428,18 +428,18 @@ body {
   width: 9%;
   height: 7%;
   bottom: -5%;
-  left: 66.5%;
+  left: 67%;
   background-color: #a50e0e;
 }
 .price_console span {
   position: absolute;
-  left: 19%;
-  top: 20%;
+  left: 11.6%;
+  top: 10%;
   font-family: "Roboto" sans-serif;
 
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 81.69%;
 
   display: flex;
@@ -480,17 +480,26 @@ body {
     width: 14px;
     height: 14px;
   }
+  .block_rooms {
+    font-weight: normal;
+  }
   .price_console span {
     font-size: 16px;
-    left: 25%;
+    left: 12%;
+    top: 25%;
+    font-weight: 400;
   }
   .price_vip span {
     font-size: 16px;
-    left: 25%;
+    top: 25%;
+    left: 12%;
+    font-weight: 400;
   }
   .price_ordinary span {
     font-size: 16px;
-    left: 25%;
+    left: 20%;
+    top: 25%;
+    font-weight: 400;
   }
   #name_iron {
     font-size: 32px;
@@ -535,20 +544,37 @@ body {
     margin-top: -0.5%;
     width: 30%;
   }
-}
-.price_console span {
-  font-size: 12px;
-  left: 25%;
-}
-.price_vip span {
-  font-size: 12px;
-  left: 25%;
-}
-.price_ordinary {
-  font-size: 12px;
-}
-#name_iron {
-  font-size: 22px;
+  .price_console{
+    width: 10%;
+    left: 68.5%;
+  }
+  .price_vip{
+    width: 10%;
+  }
+  .price_ordinary{
+    width: 10%;
+  }
+  .price_console span {
+    font-size: 11px;
+    left: 4.5%;
+    top: 15%;
+    font-weight: 400;
+  }
+  .price_vip span {
+    font-size: 11px;
+    font-weight: 400;
+    left: 4.5%;
+    top: 15%;
+  }
+  .price_ordinary span{
+    font-size: 11px;
+    font-weight: 400;
+    left: 11%;
+    top: 15%;
+  }
+  #name_iron {
+    font-size: 22px;
+  }
 }
 
 @media screen and (min-width: 591px) {
@@ -631,11 +657,11 @@ body {
   }
   .price_console span {
     font-size: 9px;
-    left: 15%;
+    left: 9%;
   }
   .price_vip span {
     font-size: 9px;
-    left: 15%;
+    left: 9%;
   }
   .price_ordinary span {
     font-size: 9px;
@@ -676,25 +702,29 @@ body {
   }
   .price_console span {
     font-size: 7.5px;
-    left: 5%;
+    left: 7.5%;
   }
   .price_vip span {
     font-size: 7.5px;
-    left: 5%;
+    left: 7.5%;
   }
   .price_ordinary span {
     left: 15%;
     font-size: 7.5px;
   }
   .block_rooms {
-    flex-direction: row;
-    left: 5%;
+    width: 100%;
+    height: 30%;
+    left: 10%;
   }
   .price_vip {
-    left: 42.5%;
+    left: 37.5%;
   }
   .price_console {
-    left: 71%;
+    left: 64.5%;
+  }
+  .price_ordinary{
+    left: 8%;
   }
 }
 </style>
