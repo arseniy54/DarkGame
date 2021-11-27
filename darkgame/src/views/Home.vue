@@ -518,7 +518,7 @@ body {
   width: 75%;
   height: 35%;
   top: 33%;
-  left: 18%;
+  left: 12%;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -538,7 +538,7 @@ body {
 .description {
   position: relative;
   left: 0%;
-  width: 100%;
+  width: 80%;
   height: 4.5%;
   top: 0%;
   font-size: 16px;
@@ -548,11 +548,10 @@ body {
 #date{
   position: relative;
   width: 7.6%;
-  font-size: 12px;
+  font-size: 16px;
   color: #ffffff;
-  left: 70%;
-  top: 50%;
-  word-wrap: break-word;
+  left: 75%;
+  top: 10%;
 
 }
 
@@ -564,7 +563,9 @@ body {
     font-size: 12px;
   }
   #date{
-    left: 60%;
+    top: 30%;
+    font-size: 12px;
+    left: 0%;
   }
   #logo {
     width: 290px;
@@ -637,12 +638,12 @@ body {
     height: 90px;
   }
   .description{
-    font-size: 10.5px;
+    font-size: 9.5px;
   }
   #date{
-    font-size: 10.5px;
-    left: 50%;
-    top: 0%;
+    font-size: 9.5px;
+    left: 0%;
+    top: 40%;
   }
    #name_news{
     font-size: 22px;
@@ -707,6 +708,14 @@ body {
   }
 }
 
+@media screen and (min-width: 691px){ 
+}
+
+@media screen and (max-width: 690px){
+  #date{
+    top: 60%;
+  }
+}
 @media screen and (min-width: 591px) {
 }
 
@@ -719,15 +728,14 @@ body {
   left: 10%;
   }
   #date{
-    font-size: 8.5px;
-    top: 40%;
+    font-size: 8px;
+    top: 70%;
   }
   .four_screen{
     width: 135%;
   }
   .description{
-    word-wrap:unset;
-    font-size: 8.5px;
+    font-size: 8px;
     font-weight: normal;
   }
   #block_news{
