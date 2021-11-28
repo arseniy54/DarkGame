@@ -19,6 +19,9 @@
             <input type="radio" name="room" class="custom_radio" id="console_room">
             <span id="console_span" >Console</span>
         </div>
+        <span id="time_game">Время брони</span>
+        <input list="limittime" type="time" id="time_game_start">
+        <input  list="limittime"  type="time" id="time_game_end">
       </div>
     </div>
   </div>
@@ -47,7 +50,8 @@ export default {};
 #user_name,
 #user_phone,
 #user_email,
-#type_room {
+#type_room,
+#time_game{
   position: absolute;
   width: 100%;
   font-family: "Roboto" sans-serif;
@@ -70,6 +74,15 @@ export default {};
 #user_email {
   top: 42.5%;
   left: 2.5%;
+}
+
+#time_game{
+    top: 90%;
+}
+
+input[type=time]{
+    position: absolute;
+    top: 95%;
 }
 
 input[type=text]{
@@ -137,6 +150,7 @@ input[type=radio]{
 #console_span{
     left:  87%;
 }
+
 
 #standart_span, #vip_span, #console_span{
 position: absolute;
