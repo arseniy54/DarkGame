@@ -34,21 +34,74 @@
         <input type="time" id="time_game_end" />
         <div class="place">
           <span id="place">Выберите место</span>
-          <div id="place_standart">    
+          <div id="place_standart" v-show="room = 1">
+
           </div>
         </div>
       </div>
     </div>
+        <button @click="OnSubmit()">Бронь</button>
     <foot />
   </div>
 </template>
 
 <script>
 import foot from '../components/footer.vue';
+import axios from 'axios';
+
 export default {
     components: {
-        foot
+        foot,
+    },
+    data:{
+      room =1,
+    return: {
+      books: [],
+      addBooking: {
+        Name: '',
+        Number: '',
+        Email: '',
+        Type: ''
+      },
     }
+  },
+  
+  methods: {
+  addBook(payload){
+  const path = '';
+  axios.post(path, payload)
+    .then(() => {
+     console.log("Пост запрос выполнен");
+    })
+    .catch((error) => {
+      // eslint-отключение следующей строки
+      console.log(error);
+      
+    });
+  },
+  initForm() {
+      this. Name= '';
+      this.Number = '';
+      this.Email = '',
+      this.Type = ''
+     
+    },
+    onSubmit(evt) {
+      evt.preventDefault();
+      this.$refs.addBookModal.hide();
+      let read = false;
+      if (this.addBookForm.read[0]) read = true;
+      const payload = {
+        Name: this.Name,
+        Number:this.Number,
+        Email:this.Email,
+        occude:this.Type
+      };
+      this.addBook(payload);
+      this.initForm();
+    }
+       
+  }
 };
 </script>
 
@@ -102,6 +155,11 @@ export default {
   top: 90%;
 }
 
+.place{
+  position: relative;
+  width: 100%;
+  top: 110%;
+}
 input[type="time"] {
   position: absolute;
   top: 95%;
@@ -193,6 +251,14 @@ input[type="radio"] {
   color: #ffffff;
 }
 
+#place_standart{
+  position: absolute;
+  width: 42%;
+  height: 47.5%; 
+  left: 28%;
+  
+  background: rgba(0, 0, 0, 0.1);
+}
 ::-webkit-input-placeholder {
   position: absolute;
   top: 20%;
