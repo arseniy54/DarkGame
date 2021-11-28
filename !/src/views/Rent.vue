@@ -43,7 +43,7 @@ import axios from 'axios';
   };
   
   methods: {
-  addBook(payload){
+  addBook(payload);{
   const path = '';
   axios.post(path, payload)
     .then(() => {
@@ -55,14 +55,14 @@ import axios from 'axios';
       
     });
   }
-  initForm() {
+  initForm();{
       this. Name= '';
       this.Number = '';
       this.Email = '',
       this.Type = ''
      
-    },
-    onSubmit(evt) {
+    }
+    onSubmit(evt);{
       evt.preventDefault();
       this.$refs.addBookModal.hide();
       let read = false;
@@ -75,7 +75,7 @@ import axios from 'axios';
       };
       this.addBook(payload);
       this.initForm();
-    },
+    }
        
   }
 </script>
