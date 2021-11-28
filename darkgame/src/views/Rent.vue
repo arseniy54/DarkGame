@@ -12,23 +12,44 @@
         <input type="text" id="email_input" placeholder="Example@gamedark.ru" />
         <span id="type_room">Тип игрового зала</span>
         <div class="radio_room">
-            <input type="radio" name="room" class="custom_radio" id="standart_room">
-            <span id="standart_span">Standart</span>    
-            <input type="radio" name="room" class="custom_radio" id="vip_room">
-            <span id="vip_span">Premium</span>
-            <input type="radio" name="room" class="custom_radio" id="console_room">
-            <span id="console_span" >Console</span>
+          <input
+            type="radio"
+            name="room"
+            class="custom_radio"
+            id="standart_room"
+          />
+          <span id="standart_span">Standart</span>
+          <input type="radio" name="room" class="custom_radio" id="vip_room" />
+          <span id="vip_span">Premium</span>
+          <input
+            type="radio"
+            name="room"
+            class="custom_radio"
+            id="console_room"
+          />
+          <span id="console_span">Console</span>
         </div>
         <span id="time_game">Время брони</span>
-        <input list="limittime" type="time" id="time_game_start">
-        <input  list="limittime"  type="time" id="time_game_end">
+        <input type="time" id="time_game_start" />
+        <input type="time" id="time_game_end" />
+        <div class="place">
+          <span id="place">Выберите место</span>
+          <div id="place_standart">    
+          </div>
+        </div>
       </div>
     </div>
+    <foot />
   </div>
 </template>
 
 <script>
-export default {};
+import foot from '../components/footer.vue';
+export default {
+    components: {
+        foot
+    }
+};
 </script>
 
 <style  scoped>
@@ -51,7 +72,8 @@ export default {};
 #user_phone,
 #user_email,
 #type_room,
-#time_game{
+#time_game,
+#place {
   position: absolute;
   width: 100%;
   font-family: "Roboto" sans-serif;
@@ -76,16 +98,23 @@ export default {};
   left: 2.5%;
 }
 
-#time_game{
-    top: 90%;
+#time_game {
+  top: 90%;
 }
 
-input[type=time]{
-    position: absolute;
-    top: 95%;
+input[type="time"] {
+  position: absolute;
+  top: 95%;
 }
 
-input[type=text]{
+#time_game_start {
+  left: 0%;
+}
+#time_game_end {
+  left: 10%;
+}
+
+input[type="text"] {
   position: absolute;
   width: 100%;
   height: 66px;
@@ -94,9 +123,8 @@ input[type=text]{
   border-radius: 6px;
   color: #ffffff;
   font-size: 37px;
-padding-left: 1.5%;
+  padding-left: 1.5%;
 }
-
 
 #name_input {
   top: 4%;
@@ -111,58 +139,58 @@ padding-left: 1.5%;
   top: 46.5%;
 }
 
-#type_room{
-top: 63%;
-
+#type_room {
+  top: 63%;
 }
-.radio_room{
-    position: absolute;
-    width: 100%;
-    top: 70%;
-}
-
-input[type=radio]{
-    position: absolute;
-    width: 38px;
-    height: 38px;
+.radio_room {
+  position: absolute;
+  width: 100%;
+  top: 70%;
 }
 
-#standart_room{
-    left: 2%;
+input[type="radio"] {
+  position: absolute;
+  width: 38px;
+  height: 38px;
 }
 
-#standart_span{
-    left: 7%;
+#standart_room {
+  left: 2%;
 }
 
-#vip_room{
-    left: 42% ;
+#standart_span {
+  left: 7%;
 }
 
-#vip_span{
-    left: 47%;
+#vip_room {
+  left: 42%;
 }
 
-#console_room{
-    left: 82%;
+#vip_span {
+  left: 47%;
 }
 
-#console_span{
-    left:  87%;
+#console_room {
+  left: 82%;
 }
 
+#console_span {
+  left: 87%;
+}
 
-#standart_span, #vip_span, #console_span{
-position: absolute;
-font-family: "Roboto" sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 37px;
-line-height: 43px;
-display: flex;
-align-items: center;
+#standart_span,
+#vip_span,
+#console_span {
+  position: absolute;
+  font-family: "Roboto" sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 37px;
+  line-height: 43px;
+  display: flex;
+  align-items: center;
 
-color: #FFFFFF;
+  color: #ffffff;
 }
 
 ::-webkit-input-placeholder {
